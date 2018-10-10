@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptablibrary_2_0.xsd">
+	<tlib-version>1.0</tlib-version>
+	<short-name>contest</short-name>
+	<uri>http://jiangsir.tw/jstl/contest</uri>
+
+	<function>
+		<name>isCanShowContestNote</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature>boolean isCanShowContestNote(tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contest)</function-signature>
+	</function>
+	<function>
+		<name>isCanShowContestProblems</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature>boolean isCanShowContestProblems(tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contest)</function-signature>
+	</function>
+	<function>
+		<name>isJoinedinThisContest</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature>boolean isJoinedinThisContest(tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contest)</function-signature>
+	</function>
+	<function>
+		<name>isVisible_FinishContest</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature>boolean isVisible_FinishContest(tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contest)</function-signature>
+	</function>
+	<function>
+		<name>isVisible_UnfinishContest</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature> boolean isVisible_UnfinishContest(tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contest)</function-signature>
+	</function>
+	<function>
+		<name>isVisible_ContestResult</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature> boolean isVisible_ContestResult(tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contest)</function-signature>
+	</function>
+	<function>
+		<name>isVisible_startContest</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature> boolean isVisible_startContest(tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contest)</function-signature>
+	</function>
+	<function>
+		<name>isVisible_pauseContest</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature> boolean isVisible_pauseContest(tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contest)</function-signature>
+	</function>
+	<function>
+		<name>isVisible_resumeContest</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature> boolean isVisible_resumeContest(tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contest)</function-signature>
+	</function>
+	<function>
+		<name>isVisible_stopContest</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature> boolean isVisible_stopContest(tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contest)</function-signature>
+	</function>
+	<function>
+		<name>isVisible_editContest</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature> boolean isVisible_editContest(tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contest)</function-signature>
+	</function>
+	<function>
+		<name>isVisible_EditContestants</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature> boolean isVisible_EditContestants(tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contest)</function-signature>
+	</function>
+	<!-- <function> <name>isFreezen</name> <function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class> <function-signature> boolean isFreezen( tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contest)</function-signature> </function> -->
+	<function>
+		<name>isAccessible_ContestSubmissions</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature>boolean isAccessible_ContestSubmissions(tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contest)</function-signature>
+	</function>
+	<function>
+		<name>isAccessible_ContestRanking</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature> boolean isAccessible_ContestRanking(tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contest)</function-signature>
+	</function>
+	<function>
+		<name>isAccessible_EditContests</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature>boolean isAccessible_EditContests(tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contest)</function-signature>
+	</function>
+	<!-- <function> <name>getHtmlInfo</name> <function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class> <function-signature>java.lang.String getHtmlInfo( java.util.Locale,tw.zerojudge.Tables.Contest)</function-signature> </function> -->
+	<function>
+		<name>isVisible_LeaveContest</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature>boolean isVisible_LeaveContest(tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contest)</function-signature>
+	</function>
+	<function>
+		<name>isVisible_rebuiltContest</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature>boolean isVisible_rebuiltContest(tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contest)</function-signature>
+	</function>
+	<function>
+		<name>isVisible_DownloadCSV</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature>boolean isVisible_DownloadCSV(tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contest)</function-signature>
+	</function>
+	<function>
+		<name>isVisible_DownloadExefile</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature> boolean isVisible_DownloadExefile(tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contest)
+		</function-signature>
+	</function>
+	<function>
+		<name>getIsStudent</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature> boolean getIsStudent(tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contest)</function-signature>
+	</function>
+
+	<function>
+		<name>isInOtherContest</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature>boolean isInOtherContest(tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contest)</function-signature>
+	</function>
+
+	<function>
+		<name>getResource_Conteststatus</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature>java.lang.String getResource_Conteststatus(java.util.Locale,tw.zerojudge.Tables.Contest)</function-signature>
+	</function>
+	<function>
+		<name>getResource_Countdown</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature>java.lang.String getResource_Countdown( java.util.Locale,tw.zerojudge.Tables.Contest)</function-signature>
+	</function>
+	<function>
+		<name>isConfigChecked</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature>boolean isConfigChecked(tw.zerojudge.Tables.Contest.CONFIG)</function-signature>
+	</function>
+<!-- 	<function>
+		<name>getPausepoints</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestTLD</function-class>
+		<function-signature>java.lang.String getPausepoints(tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contest)</function-signature>
+	</function>
+ -->
+</taglib>

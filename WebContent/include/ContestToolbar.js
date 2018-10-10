@@ -1,0 +1,65 @@
+jQuery(document).ready(function() {
+	jQuery("button#Modal_confirm").click(function(event) {
+		var title = $(this).data("title");
+		var content = $(this).data("content");
+		var type = $(this).data("type");
+		var url = $(this).data("url");
+		var qs = $(this).data("qs");
+
+		BootstrapDialog.confirm({
+			title : title,
+			message : content,
+			type : BootstrapDialog.TYPE_PRIMARY, // <-- Default value is
+			// BootstrapDialog.TYPE_PRIMARY
+			closable : true, // <-- Default value is false
+			draggable : true, // <-- Default value is false
+			btnCancelLabel : '取消', // <-- Default value is
+			// 'Cancel',
+			btnOKLabel : '確定', // <-- Default value is 'OK',
+			callback : function(result) {
+				// result will be true if button was click, while it will be
+				// false if users close the dialog directly.
+				if (result) {
+					jQuery.ajax({
+						type : type,
+						url : url,
+						data : qs,
+						cache : false,
+						timeout : 5000,
+						success : function() {
+						},
+						error : function(jqXHR, textStatus, errorThrown) {
+							console.log("jqXHR.responseText=" + jqXHR.responseText);
+							console.log("errorThrown=" + errorThrown);
+							console.log("textStatus=" + textStatus);
+							try {
+								alert = jQuery.parseJSON(jqXHR.responseText);
+								// BootstrapDialog.alert(alert.title);
+								//console.log("ContestToolbar.js err=" + err);
+								BootstrapDialog.show({
+									title : alert.type,
+									message : alert.title,
+									buttons : [ {
+										id : 'btn-ok',
+										icon : 'glyphicon glyphicon-check',
+										label : 'OK',
+										cssClass : 'btn-primary',
+										autospin : false,
+										action : function(dialogRef) {
+											dialogRef.close();
+										}
+									} ]
+								});
+							} catch (err) {
+								console.log("ContestToolbar.js err=" + err);
+								BootstrapDialog.alert(errorThrown);
+							}
+						}
+					}); // jQuery ajax;
+
+				}
+			}
+		});
+	});
+
+});

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context docBase="ZeroJudge">
+	<!-- <Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="*" deny="192.168.22.33" /> -->
+	<Resource name="mysql" auth="Container" type="javax.sql.DataSource" maxActive="50" maxIdle="50" maxWait="100" username="root" password="DBPASSWORD" driverClassName="com.mysql.jdbc.Driver" removeAbandoned="true" removeAbandonedTimeout="60" logAbandoned="true"
+		url="jdbc:mysql://127.0.0.1:3306/zerojudge?useUnicode=true&amp;characterEncoding=UTF-8" />
+	<!-- session 持久化，存入資料庫 -->
+	<Manager className="org.apache.catalina.session.PersistentManager" maxIdleBackup="10">
+		<Store className="org.apache.catalina.session.JDBCStore" connectionURL="jdbc:mysql://127.0.0.1:3306/zerojudge?useUnicode=true&amp;characterEncoding=UTF-8" connectionName="root" connectionPassword="DBPASSWORD" driverName="com.mysql.jdbc.Driver" sessionAppCol="app_name" sessionDataCol="session_data"
+			sessionIdCol="session_id" sessionLastAccessedCol="last_access" sessionMaxInactiveCol="max_inactive" sessionTable="tomcat_sessions" sessionValidCol="valid_session" />
+	</Manager>
+
+	<!-- session 持久化，存入檔案 -->
+	<!-- <Manager className="org.apache.catalina.session.PersistentManager" saveOnRestart="true"> <Store className="org.apache.catalina.session.FileStore" /> </Manager> -->
+</Context>
