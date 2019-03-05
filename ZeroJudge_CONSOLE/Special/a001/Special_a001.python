@@ -1,0 +1,39 @@
+import sys
+from itertools import zip_longest
+
+result = {"$JUDGE_RESULT":"", "$LINECOUNT":"","$USEROUT":"","$SYSTEMOUT":"","$MESSAGE":""}
+
+def main(argv):
+    if len(argv) != 3:
+        print ('special.py [inputfile] [ansfile] [outputfile]')
+        sys.exit(2)
+
+    infile = open(argv[0], 'r', encoding='UTF-8')
+    ansfile = open(argv[1], 'r', encoding='UTF-8')
+    outfile = open(argv[2], 'r', encoding='UTF-8')
+
+    for index, (out, ans) in enumerate(zip_longest(outfile.readlines(), ansfile.readlines()), 1):
+        if ans is None :
+            result["$JUDGE_RESULT"] = "OLE"
+            result["$LINECOUNT"]= str(index)
+            result["$USEROUT"]=out.strip()
+            result["$MESSAGE"]="多餘的輸出。"
+            return
+        if out is None :
+            result["$JUDGE_RESULT"]="WA"
+            result["$LINECOUNT"]=str(index)
+            result["$MESSAGE"]="沒有完整輸出答案。"
+            return
+        if out.strip() != ans.strip():
+            result["$JUDGE_RESULT"]="WA"
+            result["$LINECOUNT"]=str(index)
+            result["$USEROUT"]=out.strip()
+            result["$SYSTEMOUT"]=ans.strip()
+            result["$MESSAGE"]="您的答案比對不符合。"
+            return
+    result["$JUDGE_RESULT"]="AC"
+
+if __name__ == "__main__":
+    main(sys.argv[1:])
+    for key in result:
+        print(key+"="+result[key])
