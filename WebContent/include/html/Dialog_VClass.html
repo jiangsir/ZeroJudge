@@ -1,0 +1,19 @@
+<div class="VClass_dialog"
+	style="cursor: default; padding: 10px; display: none;">
+	<form class="form_VClass">
+		<input id="vclassid" name="vclassid" type="hidden"
+			value="${vclass.id}" />
+		<table class="table table-hover">
+			<tr>
+				<td width="112">課程名稱：</td>
+				<td width="351"><input name="vclassname" type="text"
+					id="vclassname" value="${vclass.vclassname }" size="50"
+					maxlength="50" /></td>
+			</tr>
+			<tr>
+				<td>課程說明：</td>
+				<td><textarea name="descript" cols="50" rows="5" id="descript">${vclass.descript }</textarea></td>
+			</tr>
+		</table>
+	</form>
+</div>

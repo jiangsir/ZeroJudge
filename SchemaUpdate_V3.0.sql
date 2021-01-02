@@ -1,0 +1,21 @@
+ALTER TABLE `appconfigs` ADD `site_key` VARCHAR(255) NOT NULL DEFAULT '' AFTER `httpscrt`; 
+ALTER TABLE `appconfigs` ADD `secret_key` VARCHAR(255) NOT NULL DEFAULT '' AFTER `site_key`; 
+ALTER TABLE `problems` CHANGE `timelimits` `timelimits` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '';
+ALTER TABLE `tokens` CHANGE `alive` `isdone` TINYINT(1) NOT NULL DEFAULT '0'; 
+ALTER TABLE `appconfigs` ADD `enableReCaptcha` BOOLEAN NOT NULL AFTER `httpscrt`; 
+ALTER TABLE `appconfigs` ADD `enableGoogleLogin` BOOLEAN NOT NULL AFTER `secret_key`;
+ALTER TABLE `appconfigs` CHANGE `EnableMailer` `enableMailer` TINYINT(1) NOT NULL; 
+ALTER TABLE `vclasstemplates` ADD PRIMARY KEY (`id`);
+ALTER TABLE `vclasstemplates` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `vclasstemplates` ADD `name` VARCHAR(255)  NOT NULL  DEFAULT ''  AFTER `id`;
+ALTER TABLE `contestants` CHANGE `score` `score` DOUBLE  NOT NULL  DEFAULT '0';
+ALTER TABLE `contests` ADD `sortable` INT  NOT NULL  DEFAULT '0'  AFTER `visible`;
+ALTER TABLE `schools` ADD `schoolsn` INT  NOT NULL DEFAULT '0' AFTER `schoolname`;
+ALTER TABLE `contests` ADD `vclasstemplateid` INT  NOT NULL  DEFAULT '0'  AFTER `sortable`;
+ALTER TABLE `vclassstudents` ADD `comment` varchar(255) NOT NULL DEFAULT '' AFTER `ac`;
+ALTER TABLE `contestants` ADD UNIQUE INDEX `contestid_userid_teamaccount` (`contestid`, `userid`, `teamaccount`);
+ALTER TABLE `users` ADD INDEX `authhost_email` ( `authhost` , `email`);
+ALTER TABLE `users` ADD INDEX `role_ac_id` ( `role`, `ac`, `id`);
+ALTER TABLE `appconfigs` ADD `bitconfig` INT(11)  NOT NULL  AFTER `redirect_uri`;
+ALTER TABLE `appconfigs` DROP `rejudgeable`;
+

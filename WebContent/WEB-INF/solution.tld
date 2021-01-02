@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptablibrary_2_0.xsd">
+	<tlib-version>1.0</tlib-version>
+	<short-name>solution</short-name>
+	<uri>http://jiangsir.tw/jstl/solution</uri>
+	<function>
+		<name>isCodelockAccessible</name>
+		<function-class>tw.jiangsir.Utils.TLDs.SolutionTLD</function-class>
+		<function-signature>boolean
+			isCodelockAccessible(tw.zerojudge.Tables.OnlineUser,
+			tw.zerojudge.Tables.Solution)
+		</function-signature>
+	</function>
+	<function>
+		<name>getIsOwner</name>
+		<function-class>tw.jiangsir.Utils.TLDs.SolutionTLD</function-class>
+		<function-signature>boolean getIsOwner(tw.zerojudge.Tables.OnlineUser,
+			tw.zerojudge.Tables.Solution)
+		</function-signature>
+	</function>
+	<!-- <function> <name>isVisible_ManualJudge</name> <function-class>tw.jiangsir.Utils.TLDs.SolutionTLD</function-class> 
+		<function-signature>boolean isVisible_ManualJudge(tw.zerojudge.Tables.OnlineUser, 
+		tw.zerojudge.Tables.Solution)</function-signature> </function> -->
+	<function>
+		<name>getHtmlJudgement</name>
+		<function-class>tw.jiangsir.Utils.TLDs.SolutionTLD</function-class>
+		<function-signature>java.lang.String
+			getHtmlJudgement(tw.zerojudge.Tables.OnlineUser,
+			tw.zerojudge.Tables.Solution)
+		</function-signature>
+	</function>
+	<function>
+		<name>canShowDetails</name>
+		<function-class>tw.jiangsir.Utils.TLDs.SolutionTLD</function-class>
+		<function-signature>boolean
+			canShowDetails(tw.zerojudge.Tables.OnlineUser,
+			tw.zerojudge.Tables.Solution)
+		</function-signature>
+	</function>
+
+	<function>
+		<name>getHtmlShowCode</name>
+		<function-class>tw.jiangsir.Utils.TLDs.SolutionTLD</function-class>
+		<function-signature>java.lang.String
+			getHtmlShowCode(tw.zerojudge.Tables.OnlineUser,
+			tw.zerojudge.Tables.Solution)
+		</function-signature>
+	</function>
+	<function>
+		<name>getHtmlDiff</name>
+		<function-class>tw.jiangsir.Utils.TLDs.SolutionTLD</function-class>
+		<function-signature>boolean
+			getHtmlDiff(javax.servlet.http.HttpSession,
+			tw.zerojudge.Tables.Solution)
+		</function-signature>
+	</function>
+	<function>
+		<name>isVisible_Diff</name>
+		<function-class>tw.jiangsir.Utils.TLDs.SolutionTLD</function-class>
+		<function-signature>boolean
+			isVisible_Diff(javax.servlet.http.HttpSession,
+			tw.zerojudge.Tables.Solution)
+		</function-signature>
+	</function>
+	<function>
+		<name>isVisible_Deny</name>
+		<function-class>tw.jiangsir.Utils.TLDs.SolutionTLD</function-class>
+		<function-signature>boolean
+			isVisible_Deny(javax.servlet.http.HttpSession,
+			tw.zerojudge.Tables.Solution)
+		</function-signature>
+	</function>
+	<function>
+		<name>getUpfile</name>
+		<function-class>tw.jiangsir.Utils.TLDs.SolutionTLD</function-class>
+		<function-signature>tw.zerojudge.Tables.Upfile
+			getUpfile(tw.zerojudge.Tables.Solution)
+		</function-signature>
+	</function>
+
+</taglib>
