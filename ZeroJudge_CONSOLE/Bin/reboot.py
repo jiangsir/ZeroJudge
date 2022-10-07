@@ -1,0 +1,3 @@
+import CommandUtils
+
+CommandUtils.reboot()

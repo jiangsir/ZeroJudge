@@ -1,0 +1,284 @@
+/* ThemeOfficeMenu Style Sheet */
+
+.ThemeOfficeMenu,.ThemeOfficeSubMenuTable
+{
+	font-family:	verdana, arial, sans-serif;
+	font-size:	15px;
+
+	padding:	0;
+
+	white-space:	nowrap;
+	cursor:		default;
+}
+
+.ThemeOfficeSubMenu
+{
+	position:	absolute;
+	visibility:	hidden;
+	overflow:	hidden;
+
+	padding:	0px;
+	border:		0px;
+
+	background-color:	transparent;
+}
+
+.ThemeOfficeSubMenuShadow
+{
+	z-index:	-1;
+	position:	absolute;
+	top:		9px;
+	left:		9px;
+	width:		100%;
+	height:		300em;
+	background-color:	black;
+	opacity:	0.15;
+	border:		0;
+	margin:		0;
+}
+
+.ThemeOfficeSubMenuTable
+{
+	border:		1px solid #ADAA9C;
+	background-color:	white;
+	padding:	1px;
+	margin:		0px 2px 2px 0px;
+}
+
+.ThemeOfficeMainItem,.ThemeOfficeMainItemHover,.ThemeOfficeMainItemActive,
+.ThemeOfficeMenuItem,.ThemeOfficeMenuItemHover,.ThemeOfficeMenuItemActive
+{
+	border:		0;
+	cursor:		default;
+	white-space:	nowrap;
+}
+
+/* common background color to both horizontal and vertical menus */
+
+.ThemeOfficeMainItem
+{
+	/*background-color:	#EFEBDE;   這行註解掉可讓main menu的底變透明*/
+}
+
+.ThemeOfficeMainItemHover,.ThemeOfficeMainItemActive
+{
+	/*background-color:	#C6D3EF;*/
+	text-decoration: underline; /* qx 改為底線顯示 */
+}
+
+/* horizontal main menu */
+
+.ThemeOfficeMainItem
+{
+	padding:	1px;
+	border:		0;
+}
+
+td.ThemeOfficeMainItemHover,td.ThemeOfficeMainItemActive
+{
+	/* padding:	0px; */ /* qx */
+	/* border:		1px solid #3169C6; */ /* qx */
+	/* background-color:	#C6D3EF;*/
+}
+
+.ThemeOfficeMainFolderLeft,.ThemeOfficeMainItemLeft,
+.ThemeOfficeMainFolderText,.ThemeOfficeMainItemText,
+.ThemeOfficeMainFolderRight,.ThemeOfficeMainItemRight
+{
+	background-color:	inherit;
+	white-space:	nowrap;
+}
+
+/* vertical main menu sub components */
+
+td.ThemeOfficeMainFolderLeft,
+td.ThemeOfficeMainItemLeft
+{
+	padding:	3px 2px 3px 1px;
+
+	border:		0;
+	background-color:	inherit;
+	white-space:	nowrap;
+}
+
+td.ThemeOfficeMainFolderText,
+td.ThemeOfficeMainItemText
+{
+	padding:	3px 5px 3px 5px;
+
+	border:		0;
+	background-color:	inherit;
+	white-space:	nowrap;
+}
+
+td.ThemeOfficeMainItemRight,
+td.ThemeOfficeMainFolderRight
+{
+	padding:	3px 1px 3px 0px;
+
+	border:		0;
+	background-color:	inherit;
+	white-space:	nowrap;
+}
+
+
+tr.ThemeOfficeMainItemHover td.ThemeOfficeMainFolderLeft,
+tr.ThemeOfficeMainItemActive td.ThemeOfficeMainFolderLeft,
+tr.ThemeOfficeMainItemHover td.ThemeOfficeMainItemLeft,
+tr.ThemeOfficeMainItemActive td.ThemeOfficeMainItemLeft
+{
+	padding:	2px 2px 2px 0px;
+
+	border-width:	1px 0px 1px 1px;
+	border-style:	solid;
+	border-color:	#3169C6;
+}
+
+tr.ThemeOfficeMainItemHover td.ThemeOfficeMainFolderText,
+tr.ThemeOfficeMainItemActive td.ThemeOfficeMainFolderText,
+tr.ThemeOfficeMainItemHover td.ThemeOfficeMainItemText,
+tr.ThemeOfficeMainItemActive td.ThemeOfficeMainItemText 
+{
+	padding:	2px 5px 2px 5px;
+
+	border-width:	1px 0px 1px 0px;
+	border-style:	solid;
+	border-color:	#3169C6;
+}
+
+tr.ThemeOfficeMainItemHover td.ThemeOfficeMainFolderRight,
+tr.ThemeOfficeMainItemActive td.ThemeOfficeMainFolderRight,
+tr.ThemeOfficeMainItemHover td.ThemeOfficeMainItemRight,
+tr.ThemeOfficeMainItemActive td.ThemeOfficeMainItemRight
+{
+	padding:	2px 0px 2px 0px;
+
+	border-width:	1px 1px 1px 0px;
+	border-style:	solid;
+	border-color:	#3169C6;
+}
+
+/* sub menu sub components */
+
+.ThemeOfficeMenuItem
+{
+	background-color:	white;
+}
+
+.ThemeOfficeMenuItemHover,.ThemeOfficeMenuItemActive
+{
+	background-color:	#C6D3EF;
+}
+
+.ThemeOfficeMenuFolderLeft,
+.ThemeOfficeMenuItemLeft
+{
+	padding:	3px 3px 3px 2px;
+	border:		0;
+
+	white-space:	nowrap;
+
+	background-color:	#EFEFDE;
+}
+
+.ThemeOfficeMenuFolderText,
+.ThemeOfficeMenuItemText
+{
+	padding:	3px 5px 3px 5px;
+	border:		0;
+
+	white-space:	nowrap;
+}
+
+.ThemeOfficeMenuFolderRight,
+.ThemeOfficeMenuItemRight
+{
+	padding:	3px 1px 3px 0px;
+	border:		0;
+
+	white-space:	nowrap;
+}
+
+.ThemeOfficeMenuItemHover .ThemeOfficeMenuFolderLeft,
+.ThemeOfficeMenuItemActive .ThemeOfficeMenuFolderLeft,
+.ThemeOfficeMenuItemHover .ThemeOfficeMenuItemLeft,
+.ThemeOfficeMenuItemActive .ThemeOfficeMenuItemLeft
+{
+	padding:	2px 3px 2px 1px;
+
+	background-color:	#C6D3EF;
+
+	border-width:	1px 0px 1px 1px;
+	border-style:	solid;
+	border-color:	#3169C6;
+}
+
+.ThemeOfficeMenuItemHover .ThemeOfficeMenuFolderText,
+.ThemeOfficeMenuItemActive .ThemeOfficeMenuFolderText,
+.ThemeOfficeMenuItemHover .ThemeOfficeMenuItemText,
+.ThemeOfficeMenuItemActive .ThemeOfficeMenuItemText
+{
+	padding:	2px 5px 2px 5px;
+
+	border-width:	1px 0px 1px 0px;
+	border-style:	solid;
+	border-color:	#3169C6;
+}
+
+.ThemeOfficeMenuItemHover .ThemeOfficeMenuFolderRight,
+.ThemeOfficeMenuItemActive .ThemeOfficeMenuFolderRight,
+.ThemeOfficeMenuItemHover .ThemeOfficeMenuItemRight,
+.ThemeOfficeMenuItemActive .ThemeOfficeMenuItemRight
+{
+	padding:	2px 0px 2px 0px;
+
+	border-width:	1px 1px 1px 0px;
+	border-style:	solid;
+	border-color:	#3169C6;
+}
+
+/* menu splits */
+
+td.ThemeOfficeMenuSplit
+{
+	margin:		0px;
+	padding:	0px;
+	border:		0px;
+}
+
+div.ThemeOfficeMenuSplit
+{
+	margin:		3px;
+	height:		1px;
+	overflow:	hidden;
+	background-color:	inherit;
+	border-top:	1px solid #C6C3BD;
+}
+
+/* image shadow animation */
+
+/*
+	seq1:	image for normal
+	seq2:	image for hover and active
+
+	To use, in the icon field, input the following:
+	<img class="seq1" src="normal.gif" /><img class="seq2" src="hover.gif" />
+*/
+
+.ThemeOfficeMenuItem img.seq1
+{
+	display:	inline;
+}
+
+.ThemeOfficeMenuItemHover seq2,
+.ThemeOfficeMenuItemActive seq2
+{
+	display:	inline;
+}
+
+.ThemeOfficeMenuItem .seq2,
+.ThemeOfficeMenuItemHover .seq1,
+.ThemeOfficeMenuItemActive .seq1
+{
+	display:	none;
+}
