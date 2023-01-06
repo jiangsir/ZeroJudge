@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="run">
+	<property environment="env" />
+	<property name="appname" value="${appname}" />
+	<property name="TOMCAT_HOME" value="${TOMCAT_HOME}" />
+	<path id="CLASSPATH">
+		<fileset dir="${basedir}/WEB-INF/lib">
+			<include name="**/*.jar" />
+		</fileset>
+		<pathelement location="${basedir}/WEB-INF/lib/activation.jar" />
+		<pathelement location="${basedir}/WEB-INF/lib/commons-fileupload-1.2.1.jar" />
+		<pathelement location="${basedir}/WEB-INF/lib/commons-io-2.4.jar" />
+		<pathelement location="${basedir}/WEB-INF/lib/commons-codec-1.6.jar" />
+		<pathelement location="${basedir}/WEB-INF/lib/jackson-all-1.8.3.jar" />
+		<pathelement location="${basedir}/WEB-INF/lib/google-api-translate-java-0.92.jar" />
+		<pathelement location="${basedir}/WEB-INF/lib/imgscalr-lib-4.2.jar" />
+
+		<pathelement location="${basedir}/WEB-INF/lib/jdom.jar" />
+
+		<pathelement location="${basedir}/WEB-INF/lib/jericho-html-3.2.jar" />
+		<pathelement location="${basedir}/WEB-INF/lib/json.jar" />
+		<pathelement location="${basedir}/WEB-INF/lib/jstl.jar" />
+		<pathelement location="${basedir}/WEB-INF/lib/junit-4.4.jar" />
+		<pathelement location="${basedir}/WEB-INF/lib/mail.jar" />
+		<pathelement location="${basedir}/WEB-INF/lib/mysql-connector-java-5.1.5-bin.jar" />
+		<pathelement location="${basedir}/WEB-INF/lib/standard.jar" />
+		<pathelement location="${basedir}/WEB-INF/lib/jsch-0.1.45.jar" />
+		<pathelement location="${basedir}/WEB-INF/lib/log4j-1.2.16.jar" />
+		<pathelement location="${basedir}/WEB-INF/lib/commons-lang-2.6.jar" />
+		<pathelement location="${basedir}/WEB-INF/lib/scribe-1.3.0.jar" />
+		<pathelement location="${basedir}/WEB-INF/classes" />
+		<pathelement location="${basedir}/work" />
+		<pathelement location="${TOMCAT_HOME}/lib/annotations-api.jar" />
+		<pathelement location="${TOMCAT_HOME}/lib/servlet-api.jar" />
+		<pathelement location="${TOMCAT_HOME}/lib/jasper.jar" />
+		<pathelement location="${TOMCAT_HOME}/lib/jsp-api.jar" />
+		<pathelement location="${TOMCAT_HOME}/lib/el-api.jar" />
+	</path>
+
+	<tstamp>
+		<format property="now" pattern="yyyy-MM-dd-hh-mm" />
+	</tstamp>
+
+	<target depends="makewar" name="run" description="">
+		<echo message="執行順序: makewar" />
+	</target>
+
+	<target name="makewar">
+		<echo message="target makewar: * 製作 war 檔" />
+
+		<mkdir dir="${basedir}/WEB-INF/classes" />
+		<javac srcdir="${basedir}/src" destdir="${basedir}/WEB-INF/classes">
+			<classpath refid="CLASSPATH" />
+		</javac>
+		<copy includeemptydirs="false" todir="${basedir}/WEB-INF/classes">
+			<fileset dir="${basedir}/src">
+				<include name="**/*.properties" />
+			</fileset>
+		</copy>
+		<war destfile="${basedir}/${appname}.war" webxml="${basedir}/WEB-INF/web.xml">
+			<fileset dir="${basedir}">
+				<include name="**/*.*" />
+			</fileset>
+			<fileset dir="${basedir}" includes="src/**" />
+			<lib dir="${basedir}/WEB-INF/lib" />
+			<classes dir="${basedir}/WEB-INF/classes" />
+		</war>
+
+	</target>
+</project>

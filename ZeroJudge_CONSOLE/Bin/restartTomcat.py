@@ -1,0 +1,4 @@
+import CommandUtils
+
+CommandUtils.restartTomcat()
+

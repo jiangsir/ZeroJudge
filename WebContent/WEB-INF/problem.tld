@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptablibrary_2_0.xsd">
+	<tlib-version>1.0</tlib-version>
+	<short-name>problem</short-name>
+	<uri>http://jiangsir.tw/jstl/problem</uri>
+	<function>
+		<name>getHtmlVerify</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ProblemTLD</function-class>
+		<function-signature>java.lang.String getHtmlVerify(tw.zerojudge.Tables.OnlineUser)</function-signature>
+	</function>
+	<!-- <function> <name>isAuthor</name> <function-class>tw.jiangsir.Utils.TLDs.ProblemTLD</function-class> <function-signature>boolean isAuthor(tw.zerojudge.Tables.OnlineUser, tw.zerojudge.Tables.Problem)</function-signature> </function> -->
+	<function>
+		<name>canSubmitCode</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ProblemTLD</function-class>
+		<function-signature>boolean canSubmitCode(tw.zerojudge.Tables.OnlineUser, tw.zerojudge.Tables.Problem)</function-signature>
+	</function>
+	<function>
+		<name>getIsTestjudgeAccessible</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ProblemTLD</function-class>
+		<function-signature>boolean getIsTestjudgeAccessible(tw.zerojudge.Tables.OnlineUser)</function-signature>
+	</function>
+	<function>
+		<name>isCanRejudgeProblem</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ProblemTLD</function-class>
+		<function-signature>boolean isCanRejudgeProblem(tw.zerojudge.Tables.OnlineUser, tw.zerojudge.Tables.Problem)</function-signature>
+	</function>
+	<function>
+		<name>isCanDownloadIndata</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ProblemTLD</function-class>
+		<function-signature>boolean isCanDownloadIndata(tw.zerojudge.Tables.OnlineUser, tw.zerojudge.Tables.Problem)</function-signature>
+	</function>
+	<function>
+		<name>isCanDownloadOutdata</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ProblemTLD</function-class>
+		<function-signature>boolean isCanDownloadOutdata(tw.zerojudge.Tables.OnlineUser, tw.zerojudge.Tables.Problem)</function-signature>
+	</function>
+	<function>
+		<name>canShowDetails</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ProblemTLD</function-class>
+		<function-signature>boolean canShowDetails(tw.zerojudge.Tables.OnlineUser, tw.zerojudge.Tables.Problem)</function-signature>
+	</function>
+	<function>
+		<name>canShowCode</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ProblemTLD</function-class>
+		<function-signature>boolean canShowCode(tw.zerojudge.Tables.OnlineUser, tw.zerojudge.Tables.Problem)</function-signature>
+	</function>
+
+</taglib>

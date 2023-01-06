@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptablibrary_2_0.xsd">
+	<tlib-version>1.0</tlib-version>
+	<short-name>contestant</short-name>
+	<uri>http://jiangsir.tw/jstl/contestant</uri>
+	<function>
+		<name>isVisible_KickUser</name>
+		<function-class>tw.jiangsir.Utils.TLDs.ContestantTLD</function-class>
+		<function-signature>boolean isVisible_KickUser(tw.zerojudge.Tables.OnlineUser,tw.zerojudge.Tables.Contestant)</function-signature>
+	</function>
+</taglib>
